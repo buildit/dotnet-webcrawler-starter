@@ -12,24 +12,24 @@ Your solution will form the basis for discussion in subsequent interviews.
 ## What you need to do
 Please write a simple web crawler in C#.
 
-The crawler should be limited to one domain. Given a starting URL – say http://wiprodigital.com - it should visit all pages within the domain, but not follow the links to external sites such as Google or Twitter.
+The crawler should be limited to one domain. Given a starting URL – say http://wiprodigital.com - it should visit all pages within the domain, but not follow the links to external sites such as Google or Twitter. No links should end with a slash (/).
 
 The expected output format:
 ```json
 {
     "uri": "https://test.com/about.html",
     "internalLinks": [
-        "https://test.com/",
+        "https://test.com",
         "https://test.com/about.html#",
         "https://test.com/search.html",
         "https://test.com/categories.html",
-        "https://test.com/articles/2015-04-23-forum/",
+        "https://test.com/articles/2015-04-23-forum",
         "https://test.com/feed.xml"
     ],
     "externalLinks": [
         "https://groups.google.com/forum/#!forum/test",
-        "https://test.tumblr.com/",
-        "https://www.agilementoring.com/",
+        "https://test.tumblr.com",
+        "https://www.agilementoring.com",
         "mailto:test@test.com",
         "https://github.com/test",
         "https://twitter.com/test"
